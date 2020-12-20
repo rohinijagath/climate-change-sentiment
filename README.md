@@ -11,9 +11,14 @@ This sentiment classification model identifies these potential customers and cou
 
 # Prerequisites
 - Programming fundamentals and the basics of the Python programming language (Python 3.x), Numpy, Pandas, Matplotlib, Seaborn
-- advertools
-- WordCloud
+- Fundamentals of Supervised Learning: Classification 
+- [advertools](https://advertools.readthedocs.io/en/master/)
+- [WordCloud](https://amueller.github.io/word_cloud/)
 - [NLTK](https://www.nltk.org/)
-- Scikit-learn
+- [Scikit-learn](https://scikit-learn.org/)
 
 # Key Insights
+- Several sentiment classification machine learning models were trained and tested on tweet data. The tweets were cleaned, pre-processed and the data was balanced using the SMOTE algorithm.
+- Logistic Regression & SVC were the top performing model choices, with SVC producing the best f1-scores.
+- Balancing and Cleaning of tweet data may not always result in better prediction performance as features are lost and the data balance may reflect the underlying distribution of tweets in real life.
+- After training and model evaluation it was discovered that the Neutral tweet class did indeed have lower recall than other classes regardless of classification method, balancing or data processing. A subsequent Vader Analysis showed that the majority of neutral tweets echoed Pro or Anti Sentiment Classes. This overlap into Pro aand Anti classes affects model performance significantly.
